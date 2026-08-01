@@ -1,0 +1,200 @@
+<% layout("layouts/boilerplate") %>
+
+    <!-- <br>
+    <h3>All Listings</h3><br> -->
+    
+    <!-- category carousel and tax toggle switch -->
+
+    <div class="row ">
+
+        <div class="col carousel-nav  col-lg-12">
+           
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active " data-bs-interval="10000">
+            
+                        <div class="carousel-container ">
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Trending">
+                                    <i class="fa-solid fa-fire"></i>
+                                <p>Trending</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Rooms">
+                                    <i class="fa-solid fa-bed"></i>
+                                <p>Rooms</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Iconic_Cities">
+                                    <i class="fa-solid fa-mountain-city"></i>
+                                <p>Iconic Cities</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Mountains">
+                                    <i class="fa-solid fa-mountain"></i>
+                                <p>Mountains</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Arctic">
+                                     <i class="fa-regular fa-snowflake"></i>
+                                <p>Arctic</p>
+                                </a>
+                               
+                            </div>
+                        </div>
+            
+            
+                    </div>
+            
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="carousel-container ">
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Castles">
+                                     <i class="fa-brands fa-fort-awesome"></i>
+                                <p>Castles</p>
+                                </a>
+                               
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Amazing_Pools">
+                                    <i class="fa-solid fa-person-swimming"></i>
+                                <p>Amazing Pools</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Camping">
+                                     <i class="fa-solid fa-campground"></i>
+                                <p>Camping</p>
+                                </a>
+                               
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Farm">
+                                    <i class="fa-solid fa-seedling"></i>
+                                <p>Farm</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Beach">
+                                     <i class="fa-solid fa-umbrella-beach"></i>
+                                <p>Beach</p>
+                                </a>
+                               
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="carousel-item" >
+                        <div class="carousel-container ">
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=7star">
+                                    <i class="fa-solid fa-hotel"></i>
+                                <p>7star</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Dome">
+                                     <i class="fa-solid fa-igloo"></i>
+                                <p>Dome</p>
+                                </a>
+                               
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Awesome_Yacht">
+                                    <i class="fa-solid fa-ship"></i>
+                                <p>Awesome Yacht</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Travel_Abroad">
+                                    <i class="fa-solid fa-plane-circle-check"></i>
+                                <p>Travel Abroad</p>
+                                </a>
+                                
+                            </div>
+                            <div class="carousel-content">
+                                <a href="/listings/category?category=Everyone's_favourite">
+                                    <i class="fa-solid fa-ranking-star"></i>
+                                <p>Everyone's favourite</p>
+                                </a>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+            
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <i class="fa-solid fa-angles-left"></i>
+                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                   <i class="fa-solid fa-angles-right"></i>
+                    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="tax-switch">
+                <div class="form-check form-switch ">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Display Total After Taxes</label>
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-2">
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%= listing._id %>" class="listing-link">
+                <div class="card col listing-card">
+                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing-image" style="height: 15rem;">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <p class="card-text"><b>
+                                <%= listing.title %>
+                            </b><br>&#x20B9;<%= listing.price.toLocaleString("en-IN")%>/night
+                            <i class="tax-info">&nbsp;&nbsp;+18%&nbsp;GST</i>
+                        </p>
+                            
+                    </div>
+                </div>
+            </a>
+            
+        <% } %>
+    </div>
+     
+<script>
+    let taxSwitch= document.getElementById("flexSwitchCheckDefault");
+    taxSwitch.addEventListener("click",()=>{
+        let taxInfo = document.getElementsByClassName("tax-info");//many listings therefore use for-loop
+        for(let info of taxInfo){
+            if(info.style.display !="inline"){
+            info.style.display="inline";
+            }else{
+              info.style.display="none";  
+            }
+        }
+    });
+</script>
+
+
+
+    
+    
+

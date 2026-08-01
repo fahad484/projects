@@ -1,0 +1,200 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.container-fluid{
+    background-color: white;
+}
+.fa-compass{
+    font-size: 2rem;
+    color:#fe424d ;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+/* footer */
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links , .f-info-socials, .f-info-brand{
+    width: 100%;
+}
+
+.f-info-socials i{
+    margin-right:1rem;
+    font-size: 1.3rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+
+.card-img-top{
+    width: 100% !important;
+    border-radius: 1rem !important;
+    /* height: 15rem !important; */
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400 !important;
+}
+
+/* img a tag */
+.listing-link{
+    text-decoration: none;
+    color:#222222;
+}
+/* card-effect */
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+/* new page */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* edit page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show page */
+.btns{
+    display: flex;
+}
+.show-img{
+    height: 30vh;
+    background-size: cover !important;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* map */
+
+
+
+#map {
+    height: 380px;
+    width: 100vh;
+    
+}
+
+/* carousel */
+ 
+                #carouselExampleDark{
+                    border-radius: 1rem;
+                    width: 80%;
+
+                }
+                .carousel-inner{
+                    padding: 0 3.5rem;
+                }
+                 
+                .carousel-container{
+                    margin-top: .8rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    /* flex: 1; */
+                }  
+                .carousel-content{
+                    text-align: center;
+                    opacity: 0.7;
+                    border: 0.1rem solid #fff ;
+                    
+                } 
+                .carousel-content a{
+                    color: #222222;
+                    text-decoration: none;
+                }
+                .carousel-content a:hover{
+                    cursor: pointer;
+                    color: black;
+                    opacity: 1;
+                }           
+                .carousel-content:active{
+                    border-bottom-color:  black;
+                    opacity: 1;
+                }           
+                .carousel-content i{
+                    font-size:1.3rem;
+                }
+                .carousel-content p{
+                    font-size:.8rem;
+                }
+                
+
+                i{
+                    padding: .15rem;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+                .carousel-control-prev,.carousel-control-next{
+                    width: 1rem;
+                    
+
+                }
+                .carousel-control-prev i,
+                .carousel-control-next i {
+                    font-size: 2.2rem;
+                    color: black;
+                    opacity: 0.75;
+                    padding: 1rem;
+                    border-radius: 50%;
+                }
+
+.carousel-nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.tax-switch{
+    border: .1rem solid rgb(160, 160, 160);
+    border-radius: .85rem;
+    padding: .35rem;
+}
+
+.tax-info{
+    display: none;
+}
+
